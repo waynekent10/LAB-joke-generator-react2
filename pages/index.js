@@ -25,7 +25,7 @@ function Home() {
       <Joker joke={joke} btnText={btnText} />
       {btnText === 'Get A Joke' || btnText === 'Get Another Joke'
         ? <Button type="button" onClick={getAJoke}> {btnText}</Button>
-        : <Button type="button" onClick={() => setButton('Get Another Joke')}> </Button>}
+        : <Button type="button" onClick={() => setButton('Get Another Joke')}>{btnText} </Button>}
     </div>
   );
 }

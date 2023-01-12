@@ -1,11 +1,11 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
+import PropTypes from 'prop-types';
 
 export default function Joker({ joke, btnText }) {
   return (
     <>
       <h1>{joke.setup}</h1>
-      <p>{btnText !== 'Get Punchline' ? Joker.delivery : ''}</p>
+      <p>{btnText !== 'Get Punchline' ? joke.delivery : ''}</p>
     </>
   );
 }
@@ -13,7 +13,7 @@ export default function Joker({ joke, btnText }) {
 Joker.propTypes = {
   joke: PropTypes.shape({
     setup: PropTypes.string,
-    punchline: PropTypes.string,
+    delivery: PropTypes.string,
   }).isRequired,
   btnText: PropTypes.string.isRequired,
 };
